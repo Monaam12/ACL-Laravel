@@ -8,7 +8,7 @@
 
                 <div class="card-body">
 
-                    <table class="table">
+                    <table id="user" class="table table-bordered table-striped">
                         <thead>
                           <tr>
                             <th scope="col">#</th>
@@ -56,3 +56,17 @@
     </div>
     {{ $admins->links() }}
 @endsection
+
+@push('scripts')
+
+<!-- DataTables -->
+<script src="{{asset('js/jquery.dataTables.js')}}"></script>
+<script src="{{asset('js/dataTables.bootstrap4.js')}}"></script>
+
+<script>
+    $(function () {
+      $("#user").DataTable();
+    })
+</script>
+
+@endpush

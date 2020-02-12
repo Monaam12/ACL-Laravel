@@ -17,17 +17,21 @@
             {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
         </div>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Permission:</strong>
-            <br/>
-            @foreach($permission as $value)
-                <label>{{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}
-                {{ $value->name }}</label>
-            <br/>
-            @endforeach
-        </div>
-    </div>
+    <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Permissions</h3>
+                </div>
+                <div class="card-body">
+                    <div class="form-group clearfix">
+                        @foreach ($permission as $value)
+                        <div class="form-check form-check-inline">
+                            <input name="permission[]" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="{{$value->id}}">
+                            <label class="form-check-label" for="inlineCheckbox1">{{$value->name}}</label>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
         <button type="submit" class="btn-sm btn-primary float-left"><i class="fa fa-plus-circle"></i> Add Roles</button>
     </div>

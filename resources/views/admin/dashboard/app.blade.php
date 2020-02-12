@@ -34,6 +34,9 @@
 
     <!-- Main CSS-->
     <link href="{{asset('css/theme.css')}}" rel="stylesheet" media="all">
+    <!-- DataTables -->
+  <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap4.css')}}">
+
 
 </head>
 

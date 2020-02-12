@@ -16,11 +16,15 @@
 <script src="{{asset('vendor/circle-progress/circle-progress.min.js')}}"></script>
 <script src="{{asset('vendor/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
 <script src="{{asset('vendor/chartjs/Chart.bundle.min.js')}}"></script>
-<script src="{{asset('vendor/select2/select2.min.js')}}">
-</script>
+<script src="{{asset('vendor/select2/select2.min.js')}}"></script>
+
+@stack('scripts')
 
 <!-- Main JS-->
 <script src="{{asset('js/main.js')}}"></script>
+<!-- DataTables -->
+<script src="{{asset('js/jquery.dataTables.js')}}"></script>
+<script src="{{asset('js/dataTables.bootstrap4.js')}}"></script>
 
 </body>
 
